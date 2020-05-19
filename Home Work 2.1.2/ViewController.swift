@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         trafficLightYellow.alpha = 0.3
         trafficLightGreen.alpha = 0.3
         
-        trafficLightRed.layer.cornerRadius = 80
-        trafficLightYellow.layer.cornerRadius = 80
-        trafficLightGreen.layer.cornerRadius = 80
+        trafficLightRed.layer.cornerRadius = 67
+        trafficLightYellow.layer.cornerRadius = 67
+        trafficLightGreen.layer.cornerRadius = 67
         
         startButton.layer.cornerRadius = 10
     }
