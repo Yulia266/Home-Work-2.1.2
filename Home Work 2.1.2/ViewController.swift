@@ -30,10 +30,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SwitchLightColor() {
-//        if trafficLightRed.alpha == 0.3 {
-//            trafficLightRed.alpha = 1
-//            startButton.setTitle("Next", for: .normal)
-            print("Нажала")
+        startButton.setTitle("NEXT", for: .normal)
+        
+        if trafficLightRed.alpha < 1 &&
+            trafficLightYellow.alpha < 1 &&
+            trafficLightGreen.alpha < 1 {
+
+            trafficLightRed.alpha = 1
+            return
+        }
+        
+        if trafficLightRed.alpha == 1 {
+            trafficLightRed.alpha = 0.3
+            trafficLightYellow.alpha = 1
+            return
+        }
+        
+        if trafficLightYellow.alpha == 1 {
+            trafficLightYellow.alpha = 0.3
+            trafficLightGreen.alpha = 1
+            return
+        }
+        
+        if trafficLightGreen.alpha == 1 {
+            trafficLightGreen.alpha = 0.3
+            trafficLightRed.alpha = 1
+            return
         }
     }
-
+}
